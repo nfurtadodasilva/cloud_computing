@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>TP1</servlet-name>
+		<servlet-class>com.efrei.lefrere_furtado_tp1.TP1Servlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Sender</servlet-name>
+		<servlet-class>com.efrei.lefrere_furtado_tp1.SenderServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Receiver</servlet-name>
+		<servlet-class>com.efrei.lefrere_furtado_tp1.ReceiverServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TP1</servlet-name>
+		<url-pattern>/tp1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Sender</servlet-name>
+		<url-pattern>/sender</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Receiver</servlet-name>
+		<url-pattern>/receiver</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>NameSpaceFilter</filter-name>
+		<filter-class>com.efrei.lefrere_furtado_tp1.NameSpaceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>NameSpaceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
